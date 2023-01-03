@@ -1,0 +1,19 @@
+[package]
+name = "spinners"
+version = "1.0.0"
+description = "Elegant terminal spinners"
+authors = ["XXIV"]
+homepage = "https://github.com/thechampagne/libspinners"
+repository = "https://github.com/thechampagne/libspinners"
+readme = "README.md"
+license = "MIT"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "spinners"
+crate-type =["cdylib","staticlib"]
+
+[dependencies]
+spinners = "4.1.0"
