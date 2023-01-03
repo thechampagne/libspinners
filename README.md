@@ -14,9 +14,13 @@ git clone https://github.com/thechampagne/libspinners.git
 ```
 cd libspinners
 ```
-#### 3. Build the project
+#### 3.1 Build the project
 ```
 cargo build
+```
+#### 3.2 Run tests
+```
+cargo test
 ```
 
 ### API

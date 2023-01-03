@@ -284,3 +284,21 @@ unsafe extern "C" fn spinner_clean(spinner: *mut spinner_t) {
 	let _ = Box::from_raw((*spinner).spinner as *mut Spinner);
     }
 }
+
+mod test {
+
+    use std::thread::sleep;
+    use std::time::Duration;
+    use crate::*;
+    
+    #[test]
+    fn test() {
+	unsafe {
+	    let mut sp = spinner_new(spinner_spinners_t::SPINNER_SPINNERS_DOTS9, "Waiting for 3 seconds\0".as_ptr() as *const c_char);
+	    sleep(Duration::from_secs(3));
+	    spinner_stop(&mut sp);
+	    spinner_clean(&mut sp);
+	    
+	}
+    }
+}
