@@ -26,7 +26,9 @@
 extern "C" {
 #endif
 
-typedef struct spinner_t spinner_t;
+typedef struct spinner_t {
+  void* spinner;
+} spinner_t;
 
 typedef enum {
     SPINNER_SPINNERS_DOTS,
